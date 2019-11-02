@@ -1,0 +1,8 @@
+patch#1#x11-dri3.diff
+
+replace#prepare#x11-dri3.diff#../x11-dri3.diff
+
+replace#build#arch-meson . build#./autogen.sh
+replace#build#ninja -C build#./configure --enable-dri3 --enable-drm --enable-wayland --enable-glx --enable-x11 --enable-hybrid-codec --prefix=/usr
+
+replace#package#ninja -C build install#make install

@@ -1,0 +1,5 @@
+replace#global#build ()#build()
+
+patch#1#nearest.patch
+
+replace#build#nearest.patch#../nearest.patch
